@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "Player.h"
+#include "Movies.h"
 
 using namespace std;
 
@@ -295,9 +296,9 @@ int *apply_all(int *array1, size_t size1, int *array2, size_t size2);
 
 int main() {
 
-    Player player = Player("Hero");
+    Movies movies = Movies();
+    movies.add_movie("Spider Man", "PG13");
 
-    cout << player.get_name() << endl;
     return 0;
 }
 
@@ -323,3 +324,4 @@ int *apply_all(int *array1, size_t size1, int *array2, size_t size2) {
 
     return results;
 }
+
