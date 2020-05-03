@@ -10,11 +10,11 @@ Movies::Movies() {
 
 void Movies::add_movie(std::string title, std::string rating) {
     if (!has_movie(title)) {
-        movies.push_back(Movie(std::move(title), std::move(rating)));
+        movies.emplace_back(Movie(std::move(title), std::move(rating)));
     }
 }
 
-bool Movies::has_movie(std::string title) {
+bool Movies::has_movie(const std::string &title) {
     bool has_movie = false;
     for (auto &movie: movies) {
         if (movie.get_title() == title) {
@@ -31,5 +31,13 @@ void Movies::display_movies() {
             std::cout << "  " << movie.get_title() << " : " << movie.get_rating() << " : " << movie.get_watched_count() << std::endl;
         }
         std::cout << "]" << std::endl;
+    }
+}
+
+void Movies::increment_movie_count(const std::string &title) {
+    for (auto &m : movies) {
+        if (m.get_title() == title) {
+            m.increment_watched_count();
+        }
     }
 }

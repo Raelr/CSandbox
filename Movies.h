@@ -15,8 +15,9 @@ private:
 public:
     Movies();
     void add_movie(std::string title, std::string rating);
-    bool has_movie(std::string title);
+    bool has_movie(const std::string &title);
     void display_movies();
+    void increment_movie_count(const std::string &title);
 };
 
 
