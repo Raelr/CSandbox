@@ -23,3 +23,13 @@ bool Movies::has_movie(std::string title) {
     }
     return has_movie;
 }
+
+void Movies::display_movies() {
+    if (!movies.empty()) {
+        std::cout << "Movies: [ " << std::endl;
+        for (auto &movie: movies) {
+            std::cout << "  " << movie.get_title() << " : " << movie.get_rating() << " : " << movie.get_watched_count() << std::endl;
+        }
+        std::cout << "]" << std::endl;
+    }
+}

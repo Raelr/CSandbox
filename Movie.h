@@ -5,6 +5,7 @@
 #ifndef UDEMYPRACTICE_MOVIE_H
 #define UDEMYPRACTICE_MOVIE_H
 #include <string>
+#include <iostream>
 
 class Movie {
 private:

@@ -298,7 +298,7 @@ int main() {
 
     Movies movies = Movies();
     movies.add_movie("Spider Man", "PG13");
-
+    movies.display_movies();
     return 0;
 }
 

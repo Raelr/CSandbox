@@ -16,6 +16,7 @@ public:
     Movies();
     void add_movie(std::string title, std::string rating);
     bool has_movie(std::string title);
+    void display_movies();
 };
 
 
