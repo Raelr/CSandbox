@@ -3,4 +3,4 @@ project(UdemyPractice)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(UdemyPractice main.cpp Player.cpp Player.h Movie.cpp Movie.h Movies.cpp Movies.h)
+add_executable(UdemyPractice main.cpp Player.cpp Player.h Movie.cpp Movie.h Movies.cpp Movies.h MyString.cpp MyString.h)
