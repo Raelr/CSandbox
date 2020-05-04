@@ -2,6 +2,7 @@
 #include <vector>
 #include "Player.h"
 #include "Movies.h"
+#include "MyString.h"
 
 using namespace std;
 
@@ -296,11 +297,14 @@ int *apply_all(int *array1, size_t size1, int *array2, size_t size2);
 
 int main() {
 
-    Movies movies = Movies();
-    movies.add_movie("Spider Man", "PG13");
-    movies.display_movies();
-    movies.increment_movie_count("Spider Man");
-    movies.display_movies();
+    MyString str = MyString("Hello");
+    str.display();
+    MyString str_2 = MyString("World");
+    str_2.display();
+    str = str_2;
+    str.display();
+    str = "Hello!";
+    str.display();
     return 0;
 }
 
