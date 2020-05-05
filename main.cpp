@@ -309,6 +309,10 @@ int main() {
     lower_hello.display();
     MyString combined = str + " " + str_2;
     combined.display();
+    cout << combined << endl;
+    MyString string;
+    cin >> string;
+    string.display();
     return 0;
 }
 

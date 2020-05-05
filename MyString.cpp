@@ -97,5 +97,8 @@ std::ostream &operator<<(std::ostream &os, const MyString &rhs) {
 }
 
 std::istream &operator>>(std::istream &in, MyString &rhs) {
-
+    char buff[1000];
+    in >> buff;
+    rhs = MyString{buff};
+    return in;
 }
