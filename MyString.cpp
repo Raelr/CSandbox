@@ -71,5 +71,20 @@ MyString MyString::operator=(MyString &&rhs) {
     str = rhs.str;
     rhs.str = nullptr;
     return *this;
+}
 
+MyString MyString::operator+(const MyString &rhs) const {
+    char *buff = new char[(std::strlen(str) + std::strlen(rhs.get_str())) + 1];
+
+}
+
+MyString MyString::operator-() const {
+    char *new_str = new char[std::strlen(str) + 1];
+    std::strcpy(new_str, str);
+    for (size_t i = 0; i < get_length(); i++) {
+        new_str[i] = std::tolower(new_str[i]);
+    }
+    delete [] new_str;
+    MyString new_string = new_str;
+    return new_string;
 }

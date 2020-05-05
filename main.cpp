@@ -305,6 +305,8 @@ int main() {
     str.display();
     str = "Hello!";
     str.display();
+    MyString lower_hello = -str;
+    lower_hello.display();
     return 0;
 }
 
