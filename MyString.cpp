@@ -75,7 +75,11 @@ MyString MyString::operator=(MyString &&rhs) {
 
 MyString MyString::operator+(const MyString &rhs) const {
     char *buff = new char[(std::strlen(str) + std::strlen(rhs.get_str())) + 1];
-
+    std::strcpy(buff, str);
+    std::strcat(buff, rhs.get_str());
+    MyString new_str {buff};
+    delete [] buff;
+    return new_str;
 }
 
 MyString MyString::operator-() const {
@@ -85,6 +89,6 @@ MyString MyString::operator-() const {
         new_str[i] = std::tolower(new_str[i]);
     }
     delete [] new_str;
-    MyString new_string = new_str;
+    MyString new_string {new_str};
     return new_string;
 }

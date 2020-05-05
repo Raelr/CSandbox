@@ -307,6 +307,8 @@ int main() {
     str.display();
     MyString lower_hello = -str;
     lower_hello.display();
+    MyString combined = str + " " + str_2;
+    combined.display();
     return 0;
 }
 
