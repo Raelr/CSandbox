@@ -3,8 +3,6 @@
 //
 
 #include "MyString.h"
-#include <cstring>
-#include <iostream>
 
 MyString::MyString()
     : str{nullptr}  {
@@ -91,4 +89,13 @@ MyString MyString::operator-() const {
     delete [] new_str;
     MyString new_string {new_str};
     return new_string;
+}
+
+std::ostream &operator<<(std::ostream &os, const MyString &rhs) {
+    os << rhs.str;
+    return os;
+}
+
+std::istream &operator>>(std::istream &in, MyString &rhs) {
+
 }

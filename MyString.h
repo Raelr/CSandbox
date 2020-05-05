@@ -5,8 +5,13 @@
 #ifndef UDEMYPRACTICE_MYSTRING_H
 #define UDEMYPRACTICE_MYSTRING_H
 
+#include <cstring>
+#include <iostream>
 
 class MyString {
+
+    friend std::ostream &operator<<(std::ostream &os, const MyString &rhs);
+    friend std::istream &operator>>(std::istream &in, MyString &rhs);
 
 private:
     char *str;
