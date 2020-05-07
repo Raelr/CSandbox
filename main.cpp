@@ -295,7 +295,15 @@ void print(int *array, size_t size);
 
 int *apply_all(int *array1, size_t size1, int *array2, size_t size2);
 
+void test_custom_string_operators();
+
 int main() {
+
+    test_custom_string_operators();
+    return 0;
+}
+
+void test_custom_string_operators() {
 
     MyString str = MyString("Hello");
     str.display();
@@ -325,7 +333,6 @@ int main() {
     cout << string << endl;
     string *= 3;
     cout << string << endl;
-    return 0;
 }
 
 void print(int *array, size_t size) {
