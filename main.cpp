@@ -313,6 +313,8 @@ int main() {
     MyString string;
     cin >> string;
     string.display();
+    bool is_the_same = string == combined;
+    cout << "are they the same? " << is_the_same << endl;
     return 0;
 }
 

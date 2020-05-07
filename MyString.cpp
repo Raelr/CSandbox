@@ -102,3 +102,7 @@ std::istream &operator>>(std::istream &in, MyString &rhs) {
     rhs = MyString{buff};
     return in;
 }
+
+bool MyString::operator==(const MyString &rhs) const {
+    return (std::strcmp(str, rhs.str) == 0);
+}
