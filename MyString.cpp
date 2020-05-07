@@ -127,3 +127,7 @@ MyString MyString::operator*(const size_t &rhs) const {
     }
     return new_string;
 }
+
+void MyString::operator*=(const size_t &rhs) {
+    *this = (*this * rhs);
+}

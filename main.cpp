@@ -323,6 +323,8 @@ int main() {
     cout << string << endl;
     string = string * 3;
     cout << string << endl;
+    string *= 3;
+    cout << string << endl;
     return 0;
 }
 
