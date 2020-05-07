@@ -317,6 +317,10 @@ int main() {
     cout << "are they the same? " << is_the_same << endl;
     bool greater = string > combined;
     cout << "Is string greater than combined? " << greater << endl;
+    bool less_than = string < combined;
+    cout << "Is the string less than combined? " << less_than << endl;
+    MyString new_string = string + " Appended";
+    cout << new_string << endl;
     return 0;
 }
 

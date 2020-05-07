@@ -110,3 +110,12 @@ bool MyString::operator==(const MyString &rhs) const {
 bool MyString::operator>(const MyString &rhs) const {
     return (std::strcmp(str, rhs.str) > 0);
 }
+
+bool MyString::operator<(const MyString &rhs) const {
+    return (std::strcmp(str, rhs.str) < 0);
+}
+
+MyString MyString::operator+=(const MyString &rhs) const {
+    return *this + rhs;
+}
+

@@ -30,6 +30,8 @@ public:
     MyString operator-() const;
     bool operator==(const MyString &rhs) const;
     bool operator>(const MyString &rhs) const;
+    bool operator<(const MyString &rhs) const;
+    MyString operator+=(const MyString &rhs) const;
 };
 
 #endif //UDEMYPRACTICE_MYSTRING_H
