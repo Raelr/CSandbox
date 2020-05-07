@@ -120,7 +120,7 @@ void MyString::operator+=(const MyString &rhs) {
 }
 
 MyString MyString::operator*(const size_t &rhs) const {
-    MyString new_string = *this;
+    MyString new_string {*this};
 
     for (size_t i = 1; i < rhs; i++) {
         new_string += new_string;
