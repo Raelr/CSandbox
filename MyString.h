@@ -31,7 +31,8 @@ public:
     bool operator==(const MyString &rhs) const;
     bool operator>(const MyString &rhs) const;
     bool operator<(const MyString &rhs) const;
-    MyString operator+=(const MyString &rhs) const;
+    void operator+=(const MyString &rhs);
+    MyString operator*(const size_t &rhs) const;
 };
 
 #endif //UDEMYPRACTICE_MYSTRING_H

@@ -115,7 +115,15 @@ bool MyString::operator<(const MyString &rhs) const {
     return (std::strcmp(str, rhs.str) < 0);
 }
 
-MyString MyString::operator+=(const MyString &rhs) const {
-    return *this + rhs;
+void MyString::operator+=(const MyString &rhs) {
+    *this = (*this + rhs);
 }
 
+MyString MyString::operator*(const size_t &rhs) const {
+    MyString new_string = *this;
+
+    for (size_t i = 1; i < rhs; i++) {
+        new_string += new_string;
+    }
+    return new_string;
+}

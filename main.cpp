@@ -319,8 +319,10 @@ int main() {
     cout << "Is string greater than combined? " << greater << endl;
     bool less_than = string < combined;
     cout << "Is the string less than combined? " << less_than << endl;
-    MyString new_string = string + " Appended";
-    cout << new_string << endl;
+    string += "Appended";
+    cout << string << endl;
+    string = string * 3;
+    cout << string << endl;
     return 0;
 }
 
