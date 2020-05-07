@@ -315,6 +315,8 @@ int main() {
     string.display();
     bool is_the_same = string == combined;
     cout << "are they the same? " << is_the_same << endl;
+    bool greater = string > combined;
+    cout << "Is string greater than combined? " << greater << endl;
     return 0;
 }
 
